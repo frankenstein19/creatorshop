@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939457587539",
+    "project_id": "creator-shop",
+    "storage_bucket": "creator-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939457587539:android:ccda685ced75e69363d9a6",
+        "android_client_info": {
+          "package_name": "com.cybersquad.creatorshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939457587539-stu2pebrabglp8ebo1nfrp170hpt29a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwn5-ViXNcCmuVioDChHbJkF5lrzGiIUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939457587539-stu2pebrabglp8ebo1nfrp170hpt29a2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

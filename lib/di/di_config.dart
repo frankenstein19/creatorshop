@@ -10,6 +10,8 @@ final getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: false, //// default
 )
+///  This will initialize dependency injection in Application
+///  There are
 void configureDependencies(String env) => $initGetIt(getIt, environment: env);
 
 abstract class Env {

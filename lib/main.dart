@@ -1,16 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate/di/di_config.dart';
-import 'package:flutter_boilerplate/presentation/country/bloc/country_bloc.dart';
-import 'package:flutter_boilerplate/presentation/country/country_screen.dart';
-import 'package:flutter_boilerplate/presentation/login/bloc/login_bloc.dart';
-import 'package:flutter_boilerplate/presentation/login/login_page.dart';
 
+import 'di/di_config.dart';
 import 'domain/usecase/country_screen_usecase.dart';
 import 'domain/usecase/login_screen_usecase.dart';
-
-void main() {
+import 'presentation/country/bloc/country_bloc.dart';
+import 'presentation/country/country_screen.dart';
+import 'presentation/login/bloc/login_bloc.dart';
+import 'presentation/login/login_page.dart';
+/// App start with here
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  /// This will initialize firebase after that we can use firebase any where.
+  await Firebase.initializeApp();
   configureDependencies(Env.development);
+
   runApp(const MyApp());
 }
 

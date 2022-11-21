@@ -1,8 +1,8 @@
 
-import 'package:flutter_boilerplate/di/di_config.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../data/model/country_list_response.dart';
+import '../../di/di_config.dart';
 import '../repo/i_country_repo.dart';
 
 @devEnv
