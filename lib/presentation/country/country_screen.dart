@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/country_bloc.dart';
@@ -22,7 +23,7 @@ class _CountryScreen extends State<CountryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Countries"),),
+        appBar: AppBar(title: const Text("Countries"),actions: [IconButton(onPressed: (){FirebaseAuth.instance.signOut();}, icon: const Icon(Icons.logout))],),
         body: BlocBuilder<CountryBloc, CountryState>(
           builder: (context, state) {
             if(state is CountryLoadingState)
