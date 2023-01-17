@@ -1,4 +1,3 @@
-import 'package:creator_shop/utils/utils.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,11 +22,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   void _onEmailChanged(EmailChangedEvent event, Emitter<LoginState> emit) {
     final email = event.email;
     emit(state.copyWith(
-        email: email,
-        state: email.isNotEmpty &&
-                email.isEmailValid &&
-                state.password.isNotEmpty &&
-                state.password.isPasswordValid
+        email: email.isNotEmpty ? email : event.email,
+        state: email.isNotEmpty && state.password.isNotEmpty
             ? LoginButtonState.enable
             : LoginButtonState.disable,
         canLogin:
@@ -38,11 +34,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       PasswordChangedEvent event, Emitter<LoginState> emit) {
     final password = event.password;
     emit(state.copyWith(
-        password: password,
-        state: password.isNotEmpty &&
-                password.isPasswordValid &&
-                state.email.isNotEmpty &&
-                state.email.isEmailValid
+        password: password.isNotEmpty ? password : event.password,
+        state: password.isNotEmpty && state.email.isNotEmpty
             ? LoginButtonState.enable
             : LoginButtonState.disable,
         canLogin:
@@ -56,11 +49,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         state: LoginButtonState.progress,
         canLogin: false));
     if (await loginScreenUseCase.onLogin(state.email, state.password)) {}
-    emit(state.copyWith(
-        state: LoginButtonState.enable,
-        canLogin: false,
-        email: "",
-        password: ""));
+    emit(state.copyWith(state: LoginButtonState.enable, canLogin: false,email: "",password: ""));
   }
 
   void _onOnLoginWithGoogleEvent(

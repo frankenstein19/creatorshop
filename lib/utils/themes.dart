@@ -8,7 +8,6 @@ final lightTheme = FlexThemeData.light(
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
   blendLevel: 20,
   appBarOpacity: 0.95,
-  tabBarStyle:  FlexTabBarStyle.forBackground,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 20,
     blendOnColors: false,
@@ -29,7 +28,6 @@ final darkTheme = FlexThemeData.dark(
   blendLevel: 15,
   appBarStyle: FlexAppBarStyle.background,
   appBarOpacity: 0.90,
-  tabBarStyle:  FlexTabBarStyle.forBackground,
   swapColors: true,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 30,
