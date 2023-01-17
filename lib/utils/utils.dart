@@ -27,6 +27,9 @@ extension StringCheck on String? {
     }
     return true;
   }
+  String get capitalize {
+    return "${this![0].toUpperCase()}${this!.substring(1).toLowerCase()}";
+  }
 }
 
 
@@ -34,9 +37,10 @@ extension StringCheck on String? {
 /// Padding
 const vPaddingBetweenWidgets = 15.0;
 const vPaddingBetweenSectionWidgets = 35.0;
-const hPaddingFromScreen =15.0;
+const hPaddingFromScreen = 15.0;
 
 void showToast(String message){
+
   Fluttertoast.showToast(
       msg: message,
       toastLength: Toast.LENGTH_SHORT,

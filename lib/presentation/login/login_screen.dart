@@ -7,8 +7,7 @@ import 'package:creator_shop/utils/widgets/custom_background_widget.dart';
 import 'package:creator_shop/utils/widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../country/country_screen.dart';
+import '../dasboard/dashboard_screen.dart';
 import 'bloc/login_bloc.dart';
 
 class LoginPage extends StatefulWidget {
@@ -126,5 +125,5 @@ class _LoginPage extends State<LoginPage> {
   }
 
   void onSuccess() =>
-      Navigator.pushReplacementNamed(context, CountryScreen.path);
+      Navigator.pushReplacementNamed(context, DashboardScreen.path);
 }
