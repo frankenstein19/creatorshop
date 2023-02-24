@@ -38,7 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   # Theme Provider
-  flex_color_scheme: ^5.0.1
+  flex_color_scheme: ^6.1.2
 
   # Bloc and provider packages
   provider: ^6.0.2
@@ -87,6 +87,13 @@ dependencies:
 
   #splash
   flutter_native_splash: ^2.1.6
+
+  syncfusion_flutter_maps: ^20.4.48
+  video_player: ^2.5.1
+
+  firebase_messaging: ^14.2.5
+  flutter_local_notifications: ^13.0.0
+  flutter_tts: ^3.6.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

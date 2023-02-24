@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:creator_shop/domain/usecase/app_state_usecase.dart';
 import 'package:creator_shop/domain/usecase/create_account_usecase.dart';
 import 'package:creator_shop/presentation/create_account/create_account_screen.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -22,6 +25,9 @@ class MyApp extends StatelessWidget {
   /// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    getToken();
+    StreamController<String> controller =StreamController();
+    final value =controller.sink.add("aaa");
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => CountryBloc(getIt<CountryScreenUseCase>())),
@@ -56,5 +62,10 @@ class MyApp extends StatelessWidget {
         );
       }),
     );
+  }
+
+  Future<void> getToken() async {
+  final token = await  FirebaseMessaging.instance.getToken();
+  print("token $token");
   }
 }

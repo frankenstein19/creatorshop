@@ -5,9 +5,12 @@ import 'package:creator_shop/utils/widgets/action_button.dart';
 import 'package:creator_shop/utils/widgets/animated_list_item.dart';
 import 'package:creator_shop/utils/widgets/custom_background_widget.dart';
 import 'package:creator_shop/utils/widgets/input_field_widget.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:video_player/video_player.dart';
 
+import '../../main.dart';
 import '../country/country_screen.dart';
 import 'bloc/login_bloc.dart';
 
@@ -20,6 +23,12 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPage extends State<LoginPage> {
+
+  @override
+  void initState() {
+    FirebaseMessaging.onMessage.listen(showFlutterNotification);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -112,7 +121,7 @@ class _LoginPage extends State<LoginPage> {
                   child: SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                        onPressed: () {
+                        onPressed: () async {
                         Navigator.of(context).pushNamed(CreateAccountScreen.path);
                         }, child: const Text(StringConstants.createAccount)),
                   ),
