@@ -4,6 +4,7 @@ import 'package:creator_shop/utils/widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../main.dart';
 import '../../utils/strings.dart';
 import '../../utils/widgets/action_button.dart';
 import '../../utils/widgets/animated_list_item.dart';
@@ -178,6 +179,7 @@ class _CreateAccountScreen extends State<CreateAccountScreen> {
                       width: double.infinity,
                       child: OutlinedButton(
                           onPressed: () {
+                            ttsPlay();
                             Navigator.of(context)
                                 .pushNamed(CreateAccountScreen.path);
                           },

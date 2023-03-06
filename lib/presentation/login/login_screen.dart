@@ -8,7 +8,6 @@ import 'package:creator_shop/utils/widgets/input_field_widget.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:video_player/video_player.dart';
 
 import '../../main.dart';
 import '../country/country_screen.dart';
@@ -47,8 +46,7 @@ class _LoginPage extends State<LoginPage> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text("Welcome!",style: theme.textTheme.titleLarge,),
-                      Text("Login to continue",style: theme.textTheme.bodyMedium)
-
+                      Text("Login to continue",style: theme.textTheme.bodyMedium),
                     ],
                   ),
                 ),
@@ -122,6 +120,7 @@ class _LoginPage extends State<LoginPage> {
                     width: double.infinity,
                     child: OutlinedButton(
                         onPressed: () async {
+                         ttsPlay();
                         Navigator.of(context).pushNamed(CreateAccountScreen.path);
                         }, child: const Text(StringConstants.createAccount)),
                   ),

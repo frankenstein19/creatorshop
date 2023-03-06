@@ -94,8 +94,14 @@ Future<void> showFlutterNotification(RemoteMessage message) async {
 }
 
 Future<void> ttsPlay() async {
-  FlutterTts flutterTts = FlutterTts();
-  await flutterTts.speak("New notification");
+  try{
+    FlutterTts flutterTts = FlutterTts();
+    await flutterTts.speak("New notification");
+  }
+  catch(e){
+    print("FlutterTts ${e.toString()}");
+  }
+
 }
 
 /// Initialize the [FlutterLocalNotificationsPlugin] package.

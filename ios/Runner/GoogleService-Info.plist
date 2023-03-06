@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>939457587539-a52tuuqksog9ghntu9mtlfk9j0v3r1ma.apps.googleusercontent.com</string>
+	<string>939457587539-9ab7o8e9rgkba1k8rbo70mmeofjmrfvi.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.939457587539-a52tuuqksog9ghntu9mtlfk9j0v3r1ma</string>
+	<string>com.googleusercontent.apps.939457587539-9ab7o8e9rgkba1k8rbo70mmeofjmrfvi</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAb4QVmWPqkGCbqB-P2RY8MucfHCm3ML98</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.cybersquad.creatorshop</string>
+	<string>com.neosofttech.creatorshop</string>
 	<key>PROJECT_ID</key>
 	<string>creator-shop</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:939457587539:ios:99dc8a526ddd469763d9a6</string>
+	<string>1:939457587539:ios:0859e9616c08be0463d9a6</string>
 </dict>
 </plist>

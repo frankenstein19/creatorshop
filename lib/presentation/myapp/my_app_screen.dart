@@ -26,8 +26,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     getToken();
-    StreamController<String> controller =StreamController();
-    final value =controller.sink.add("aaa");
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => CountryBloc(getIt<CountryScreenUseCase>())),
